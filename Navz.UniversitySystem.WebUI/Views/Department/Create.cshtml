@@ -1,0 +1,49 @@
+﻿@model Navz.UniversitySystem.Application.Departments.Commands.CreateDepartment.CreateDepartmentCommand
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="card-title">Create Department</h1>
+                <form asp-action="Create" asp-controller="Department" data-ajax="true" data-ajax-method="POST">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                @Html.LabelFor(x => x.Code)
+                                @Html.EditorFor(x => x.Code, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(x => x.Code)
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                @Html.LabelFor(x => x.Name)
+                                @Html.EditorFor(x => x.Name, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(x => x.Name)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                @Html.LabelFor(x => x.Description)
+                                @Html.EditorFor(x => x.Description, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(x => x.Description)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <button class="btn btn-block btn-primary" type="submit">Create</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

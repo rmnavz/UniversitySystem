@@ -1,0 +1,16 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="row">
+    <div class="col-8">
+        <h1>Subjects</h1>
+    </div>
+    <div class="col-4">
+        <a id="create" class="btn btn-primary btn-block" asp-action="Create" asp-controller="Subject">New Subject</a>
+    </div>
+</div>
+<div class="row">
+    <div id="Data" class="col-12" data-url="Subject/Get" data-name="Subject" data-collection="subjects"></div>
+</div>
+

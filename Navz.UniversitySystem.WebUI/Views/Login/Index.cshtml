@@ -1,0 +1,47 @@
+﻿@model Navz.UniversitySystem.Application.Users.Queries.Login.LoginUserQuery
+@{
+    Layout = "Layouts/_CenteredLayout";
+    ViewData["Title"] = "Index";
+}
+
+<div class="row h-100">
+    <div class="col-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-subtitle">Login</h5>
+                <h2 class="card-title text-center">Welcome back!</h2>
+                @using (Html.BeginForm("Login", "Login", FormMethod.Post, new { @class = "form" }))
+                {
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                @Html.LabelFor(x => x.EmailAddress)
+                                @Html.EditorFor(x => x.EmailAddress, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(x => x.EmailAddress)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                @Html.LabelFor(x => x.Password)
+                                @Html.PasswordFor(x => x.Password, new { @class = "form-control" } )
+                                @Html.ValidationMessageFor(x => x.Password)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <button type="submit" class="btn btn-primary">Login</button>
+                        </div>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+    <div class="col-8">
+
+    </div>
+</div>

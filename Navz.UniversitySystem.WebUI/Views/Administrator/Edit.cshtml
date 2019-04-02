@@ -1,0 +1,49 @@
+﻿@model Navz.UniversitySystem.Application.Administrators.Queries.GetUpdateAdministrator.UpdateAdministratorViewModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h1 class="card-title">Edit Administrator</h1>
+                <form asp-action="Edit" asp-controller="Administrator" data-ajax="true" data-ajax-method="POST">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                @Html.LabelFor(x => x.FirstName)
+                                @Html.EditorFor(x => x.FirstName, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(x => x.FirstName)
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                @Html.LabelFor(x => x.LastName)
+                                @Html.EditorFor(x => x.LastName, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(x => x.LastName)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                @Html.LabelFor(x => x.EmailAddress)
+                                @Html.EditorFor(x => x.EmailAddress, new { htmlAttributes = new { @class = "form-control" } })
+                                @Html.ValidationMessageFor(x => x.EmailAddress)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <button class="btn btn-block btn-primary" type="submit">Save</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+

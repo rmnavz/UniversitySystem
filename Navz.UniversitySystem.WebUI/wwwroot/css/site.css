@@ -1,0 +1,15 @@
+.dropdown-inverse-menu {
+  text-align: right;
+  transform: translate(-50%, 0) !important;
+}
+
+.btn-card {
+  color: black;
+}
+.btn-card:hover {
+  text-decoration: none !important;
+  background: dimgray;
+  color: whitesmoke;
+}
+
+/*# sourceMappingURL=site.css.map */

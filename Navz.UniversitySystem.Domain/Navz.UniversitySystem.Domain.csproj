@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Navz.UniversitySystem.Common\Navz.UniversitySystem.Common.csproj" />
+  </ItemGroup>
+
+</Project>
